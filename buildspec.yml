@@ -20,7 +20,6 @@ phases:
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
       - npx sequelize db:create
       - npx sequelize db:migrate
-      - codebuild-breakpoint
   post_build:
     commands:
       - echo Build finalizado com sucesso em `date`
